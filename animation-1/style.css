@@ -1,0 +1,32 @@
+body {
+  position: relative;
+}
+
+.text {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 200px;
+  height: 200px;
+  border: 3px solid #000000;
+  font-family: gill sans;
+  font-size: large;
+  font-weight: 700;
+  color: #ffffff;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  background-color: rgb(216, 20, 46);
+  animation: scale 500ms ease alternate-reverse infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(2);
+  }
+}
