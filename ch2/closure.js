@@ -21,17 +21,3 @@ function inBetween(arr) {
 }
 
 console.log(inBetween(arr));
-
-let arr1 = [1, 2, 3, 4, 5, 6, 7];
-
-function inArray(arr) {
-  let result = [];
-  for (let num of arr) {
-    if (num == arr[i]) {
-      result.push(num);
-    }
-    return result;
-  }
-}
-
-console.log(inArray(arr1));
