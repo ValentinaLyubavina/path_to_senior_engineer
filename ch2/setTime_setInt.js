@@ -4,11 +4,24 @@ function printNumbers(from, to) {
   let num = from;
   num++;
   
-  let timerId = setInterval(func() {
+  let timerId = setInterval(() {
     console.log(num);
    if (num == to) {
     clearInterval(timerId)
-  } }, 1000);
+   }}, 1000);
 }
 
-setTimeout(printNumbers, 1000, 1, 10);
+console.log(printNumbers(1,10))
+
+function printNumbers2(from, to) {
+  if (number = to) {
+    return number
+  } else {
+    return setTimeout(() {
+      console.log(number);
+      number++
+    }, 1000) 
+  }
+}
+
+console.log(printNumbers2(1,10))
