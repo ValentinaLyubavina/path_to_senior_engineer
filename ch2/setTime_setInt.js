@@ -14,12 +14,14 @@ function printNumbers(from, to) {
 console.log(printNumbers(1,10))
 
 function printNumbers2(from, to) {
-  if (number = to) {
+  let number = from
+  number++
+
+  if (number == to) {
     return number
   } else {
     return setTimeout(() {
       console.log(number);
-      number++
     }, 1000) 
   }
 }
