@@ -1,44 +1,35 @@
 let head = {
-    glasses: 1
-  };
-  
-  let table = {
-    pen: 3
-    __proto__: head
-  };
-  
-  let bed = {
-    sheet: 1,
-    pillow: 2
-    __proto__: table
-  };
-  
-  let pockets = {
-    money: 2000
-    __proto__: bed
-  };
+  glasses: 1,
+};
 
-  console.log(pockets.pen)
+let table = Object.create(head);
+table.pen = 3;
 
+let bed = Object.create(table);
+bed.heet = 1;
+bed.pillow = 2;
 
-  let hamster = {
-    stomach: [],
-  
-    eat(food) {
-      this.stomach.push(food);
-    }
-  };
-  
-  let speedy = {
-    __proto__: hamster
-  };
-  
-  let lazy = {
-    stomach: []
-    __proto__: hamster
-  };
+let pockets = Object.create(bed);
+pockets.money = 2000;
 
-  speedy.eat("apple")
-  console.log(speedy.stomach)
+console.log(pockets.pen);
 
-  console.log(lazy.stomach)
+let hamster = {
+  stomach: [],
+
+  eat(food) {
+    this.stomach.push(food);
+  },
+};
+
+let speedy = Object.create(hamster);
+
+let lazy = Object.create(hamster);
+lazy.stomach = [];
+
+console.log(lazy.stomach);
+
+speedy.eat("apple");
+console.log(speedy.stomach);
+
+console.log(lazy.stomach);
