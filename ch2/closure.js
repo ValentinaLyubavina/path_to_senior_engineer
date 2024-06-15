@@ -1,6 +1,4 @@
-//learn.javascript.ru/closure
-
-https: function sum(a) {
+function sum(a) {
   return function sumTwo(b) {
     return a + b;
   };
@@ -44,4 +42,4 @@ function byField(key) {
   };
 }
 
-console.log(users.sort(byField("name")));
+console.log(users.sort(byField("age")));
