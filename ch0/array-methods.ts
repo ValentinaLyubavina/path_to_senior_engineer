@@ -1,3 +1,17 @@
+let numbers: number[] = [1, 2, 2, 13, 11, 7, 18, 20, 22, 14, 15];
+
+function mainCode(array: number[]) {
+  const evenNumbers: number[] = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 != 0 && evenNumbers.length < 3) {
+      evenNumbers.push(array[i]);
+    }
+  }
+  return evenNumbers;
+}
+
+console.log(mainCode(numbers));
+
 const users = ["Паша", "Саша", "Маша", "Коля", "Толя", "Оля"];
 
 users.forEach(function (item) {

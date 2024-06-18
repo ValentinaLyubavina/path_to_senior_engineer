@@ -57,3 +57,23 @@ console.log(b);
 
 [a, b] = [b, a];
 console.log(a);
+
+function yourCodeInside(x: number) {
+  let isOdd: boolean = true;
+
+  if (x % 2 == 0) {
+    isOdd = false;
+  }
+  return isOdd;
+}
+console.log(yourCodeInside(10));
+
+function euroToRub(x: number) {
+  return x * 90;
+}
+console.log(euroToRub(2));
+
+function milesToKm(x: number) {
+  return x * 1.609;
+}
+console.log(milesToKm(2));
