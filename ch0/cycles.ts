@@ -41,3 +41,30 @@ for (let i = 1; i <= 50; i++) {
   range.push(i);
 }
 console.log(range);
+
+let numbers: number[] = [1, 2, 3, 4, 5, 6, 7];
+
+function mainCode(array: number[]) {
+  let index = 0;
+  while (index < array.length) {
+    if (index % 2 !== 0) {
+      array[index] *= 2;
+    }
+    index++;
+  }
+  return array;
+}
+
+console.log(mainCode(numbers));
+
+function mainCode2(array: number[]) {
+  for (let i = 0; i < array.length; i++) {
+    if (i % 2 == 0) {
+      array[i] += 3;
+    }
+    i++;
+  }
+  return array;
+}
+
+console.log(mainCode2(numbers));
