@@ -51,3 +51,28 @@ function multiplyNumeric(object) {
 }
 
 console.log(multiplyNumeric(menu));
+
+const htmlDiv = {
+  className: "column",
+  rel: "main",
+  id: "block",
+};
+
+for (let prop in htmlDiv) {
+  console.log(prop, htmlDiv);
+}
+
+const person1 = {
+  name: "Anna",
+  surname: "Dance",
+  age: 18,
+  greeting() {
+    console.log("Hello");
+  },
+  changeSurname(newSurname) {
+    console.log((this.surname = newSurname));
+  },
+};
+
+person1.greeting();
+person1.changeSurname("Пупкина");

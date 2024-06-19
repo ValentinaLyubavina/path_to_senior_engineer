@@ -1,3 +1,13 @@
+function getLength(array) {
+  if (array.pop() == undefined) {
+    return 0;
+  } else {
+    return getLength(array) + 1;
+  }
+}
+
+console.log(getLength([1, 2, 3, 4, 6, 7]));
+
 function sumTo(n) {
   let result = 0;
   for (let i = 0; i <= n; i++) {
