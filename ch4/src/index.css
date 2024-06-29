@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  font-size: 3em;
+  display: inline-block;
+  color: rgb(74, 73, 73);
+  font-family: sans-serif;
+}
+
+.container content{
+  width: 100%;
+}
+
+.content {
+  padding: 2rem 2rem;
+  min-height: calc(100vh - 50px - 64px);
+  width: 100%;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.row {
+  max-width: 800px;
+}
+
+.btn {
+  position: absolute;
+  top: 0;
+  color: rgb(74, 73, 73);
+  font-family: sans-serif;
+  padding: 0px 10px;
+  font-size: 14px;
+  right: 1rem;
+  background-color: #e0e0e0;
+}
+
+.card {
+  border-radius: 10px;
+  min-width: 200px;
+}
+
+.card-content {
+  background-color: #fafafa;
+  color: #424242;
+  font-family: sans-serif;
+}
+
+.page-footer {
+  padding: 0 1rem;
+  font-family: sans-serif;
+}
