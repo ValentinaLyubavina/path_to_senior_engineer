@@ -1,0 +1,32 @@
+services:
+  db:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password  
+      MYSQL_DATABASE: database         
+      MYSQL_USER: new_user                      
+      MYSQL_PASSWORD: password         
+    networks:
+      - my_network
+
+  filler:
+    build: ./filler
+    depends_on:
+      - db
+    networks:
+      - my_network
+
+  web:
+    build: ./web
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - filler
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
+
